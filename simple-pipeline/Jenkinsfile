@@ -3,15 +3,11 @@ pipeline {
         // set a timeout of 30 minutes for this pipeline
         timeout(time: 30, unit: 'MINUTES')
     }
-    agent {
-      node {
         agent {
-	 node {
-	  label 'master'
-	 }
-	}
+	  node {
+	    label 'master'
+        }
       }
-    }
 
     stages {
 
