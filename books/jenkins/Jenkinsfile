@@ -14,7 +14,7 @@ pipeline {
         DEV_PROJECT = "jduenas89-books-dev"
         STAGE_PROJECT = "jduenas89-books-stage"
         APP_GIT_URL = "https://github.com/jorgeoxi/DO288-apps"
-        NEXUS_SERVER = "https://console-openshift-console.apps.ocp-na2.prod.nextcle.com/repository/nodejs"
+        NEXUS_SERVER = "http://nexus-common.apps.ocp-na2.prod.nextcle.com"
 
         // DO NOT CHANGE THE GLOBAL VARS BELOW THIS LINE
         APP_NAME = "books"
@@ -119,7 +119,7 @@ pipeline {
                 echo '### Cleaning existing resources in Staging ###'
                 sh '''
                         oc project ${STAGE_PROJECT}
-                        oc delete all -l app=books
+                        oc delete all -l app={APP_NAME}
                         sleep 5
                    '''
 
