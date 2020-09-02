@@ -119,7 +119,7 @@ pipeline {
                 echo '### Cleaning existing resources in Staging ###'
                 sh '''
                         oc project ${STAGE_PROJECT}
-                        oc delete all -l app=${APP_NAME}
+                        oc delete all -l app=books
                         sleep 5
                    '''
 
