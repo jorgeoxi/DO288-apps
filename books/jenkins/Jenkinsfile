@@ -67,7 +67,8 @@ pipeline {
                        --context-dir ${APP_NAME}
 
                        oc expose svc/${APP_NAME}
-            }
+           	   '''
+	    }
         }
 
         stage('Wait for S2I build to complete') {
@@ -130,6 +131,7 @@ pipeline {
 	             oc project ${STAGE_PROJECT}
                      oc new-app --name books -i books:stage
                      oc expose svc/${APP_NAME}
+                   '''
 	    }
         }
 
