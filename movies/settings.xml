@@ -5,7 +5,7 @@
          <id>internal-repository</id>
          <name>Maven Repository Manager for classroom</name>
          <!-- // TODO: Change the url attribute to the nexus proxy server URL for your environment. -->
-         <url>console-openshift-console.apps.ocp-na2.prod.nextcle.com</url>
+         <url>nexus-common.apps.ocp-na2.prod.nextcle.com</url>
          <mirrorOf>*</mirrorOf>
          </mirror>
        </mirrors>
