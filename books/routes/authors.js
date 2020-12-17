@@ -1,6 +1,6 @@
 const express = require('express');
 
-var user;
+
 const router = express.Router();
 
 const authors = require('../data/authors');
